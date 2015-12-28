@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER" prefHeight="410.0" prefWidth="400.0" spacing="50.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <children>
+      <Text fill="#2d69c9" strokeType="OUTSIDE" strokeWidth="0.0" text="航空公司訂票系統">
+         <font>
+            <Font name="MS UI Gothic" size="39.0" />
+         </font>
+      </Text>
+      <Button fx:id="book_button" mnemonicParsing="false" onAction="#bookAction" text="Book">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="search_order_button" mnemonicParsing="false" onAction="#searchYourOrderAction" text="Search your order">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="search_passenger_button" mnemonicParsing="false" onAction="#searchPassengerAction" text="Search passenger info">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Text fx:id="studentID" strokeType="OUTSIDE" strokeWidth="0.0" text="P76024164 HsiHo Huang">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+   </children>
+   <padding>
+      <Insets top="20.0" />
+   </padding>
+</VBox>

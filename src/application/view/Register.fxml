@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
+
+<GridPane alignment="TOP_CENTER" hgap="5.0" prefHeight="410.0" prefWidth="400.0" vgap="45.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="請輸入個人資料" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+         <font>
+            <Font name="MS UI Gothic" size="36.0" />
+         </font>
+      </Text>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Name :" textAlignment="RIGHT" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="nameTextField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Cellphone :" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="cellphoneTextField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <Button fx:id="register_button" mnemonicParsing="false" onAction="#registerAction" text="下一步" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Step1: 輸入個人資料" />
+      <Text opacity="0.3" strokeType="OUTSIDE" strokeWidth="0.0" text="Step 2: 選擇班機" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+      <Text opacity="0.3" strokeType="OUTSIDE" strokeWidth="0.0" text="Step 3: 完成訂票" GridPane.columnIndex="2" />
+   </children>
+   <padding>
+      <Insets top="50.0" />
+   </padding>
+</GridPane>

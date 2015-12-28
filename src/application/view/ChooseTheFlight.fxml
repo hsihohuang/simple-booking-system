@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.collections.FXCollections ?>
+
+<GridPane alignment="TOP_CENTER" hgap="5.0" prefHeight="410.0" prefWidth="400.0" vgap="45.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <padding>
+      <Insets top="50.0" />
+   </padding>
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <Text opacity="0.3" strokeType="OUTSIDE" strokeWidth="0.0" text="Step1: 輸入個人資料" GridPane.halignment="CENTER" />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Step 2: 選擇班機" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+      <Text opacity="0.3" strokeType="OUTSIDE" strokeWidth="0.0" text="Step 3: 完成訂票" GridPane.columnIndex="2" />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="請選擇班機" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+         <font>
+            <Font name="MS UI Gothic" size="36.0" />
+         </font>
+      </Text>
+      <ChoiceBox fx:id="chooseFlightBox" maxWidth="1.7976931348623157E308" GridPane.columnSpan="3" GridPane.rowIndex="2">
+    		
+      </ChoiceBox> 
+      <Button fx:id="toBookButton" layoutX="300.0" layoutY="269.0" mnemonicParsing="false" onAction="#toBookAction" text="確認訂票" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
+   </children>
+</GridPane>
