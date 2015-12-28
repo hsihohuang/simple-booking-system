@@ -17,13 +17,13 @@ import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+/**
+ * Controller.java是負責處理介面上所有與user的互動，包括場景的切換，監聽user對按鈕、選單的點擊、設定要顯示的資訊等等，
+ * 是model(程式運算)與view(介面)的溝通橋樑。
+ * 
+ * 有@FXML標記代表該變數名稱是在view底下的fxml所定義的fx:id，如showText 是在fxml裡fx:id="shoeText"的Text元件
+ */
 public class Controller {	
-	/**
-	 * Controller.java是負責處理介面上所有與user的互動，包括場景的切換，監聽user對按鈕、選單的點擊、設定要顯示的資訊等等，
-	 * 是model(程式運算)與view(介面)的溝通橋樑。
-	 * 
-	 * 有@FXML標記代表該變數名稱是在fxml裡的fx:id，如showText 是在fxml裡fx:id="shoeText"的Text元件
-	 */
 	@FXML
 	private Text studentID,showText,finishedBookText,showPassengerTexts;
 	@FXML
