@@ -16,6 +16,8 @@ import javafx.fxml.FXMLLoader;
  * Main.java是程式的進入點，會把介面的場景view底下的Main.xml與application.css(css裡目前沒有任何設定)載入，並設定到介面的舞台上。
  * 以static的HashMap, ArrayList作簡易的資料儲存;另可改寫成連接資料庫(寫在model裡),以JDBC來做連接
  * @author HsiHo Huang
+ * @date 2015/01/14
+ * @version 2.0
  */
 public class Main extends Application {
 	public static HashMap<String,Passenger> passengerMap = new HashMap<String,Passenger>();
