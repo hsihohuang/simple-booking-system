@@ -26,10 +26,13 @@ public class SpecificFlight {
 	}
 	
 	public String getAllBookingOfSpecificFlight(){  //取得該班機所有的乘客資料
-		String result ="";
-		for (Iterator<Booking> iterator =  this.bookingList.iterator();iterator.hasNext();)
-			result += iterator.next().getBookingInfoString("passenger");
-		return result;
+		StringBuilder result = new StringBuilder("");
+		if(this.bookingList.isEmpty())
+			result.append("沒有任何乘客!!");
+		else{
+			this.bookingList.forEach(booking -> result.append(booking.getBookingInfoString("passenger")));
+		}	
+		return result.toString();
 	}
 	
 	void addLinkToBooking(Booking bookOne){ //與Booking建立Link

@@ -52,10 +52,8 @@ public class Controller {
 		chooseFlightBox = (ChoiceBox<String>) root.getChildrenUnmodifiable().get(4);
 		chooseFlightBox.setItems(FXCollections.observableArrayList(Main.flightInfoArray));
 			
-		chooseFlightBox.getSelectionModel().selectedIndexProperty().addListener(new	
-		        ChangeListener<Number>() {
-			        public void changed(ObservableValue ov,
-		                Number value, Number new_value) {
+		chooseFlightBox.getSelectionModel().selectedIndexProperty().addListener(new	ChangeListener<Number>() {
+			        public void changed(ObservableValue ov, Number value, Number new_value) {
 			        		tmpFlight = (Main.specificFlightMap.get((int)ov.getValue()+1));
 			        }
 		});		
@@ -81,9 +79,9 @@ public class Controller {
 		tmpPassenger = Main.passengerMap.get(searchNameTextField.getText());
 		if(tmpPassenger== null)
 			result = "您沒有註冊，也沒有任何訂單!!";
-		else{
+		else
 			result = tmpPassenger.getAllBookingOfPassenger();
-		}
+		
 		showText.setText(result);
 	}	
 		
@@ -106,16 +104,14 @@ public class Controller {
 		chooseFlightBox = (ChoiceBox<String>) root.getChildrenUnmodifiable().get(1);
 		chooseFlightBox.setItems(FXCollections.observableArrayList(Main.flightInfoArray));
 			
-		chooseFlightBox.getSelectionModel().selectedIndexProperty().addListener(new
-				ChangeListener<Number>() {
-		            public void changed(ObservableValue ov,
-		                    Number value, Number new_value) {
+		chooseFlightBox.getSelectionModel().selectedIndexProperty().addListener(new ChangeListener<Number>() {
+		            public void changed(ObservableValue ov, Number value, Number new_value) {
 		            			tmpFlight = Main.specificFlightMap.get((int)ov.getValue()+1);
 		                        String result = tmpFlight.getAllBookingOfSpecificFlight();
 		                        showPassengerTexts = (Text) root.getChildrenUnmodifiable().get(2);
-		                        showPassengerTexts.setText(result!= ""? result: "沒有任何乘客");
+		                        showPassengerTexts.setText(result);
 		            }
-		    });
+		});
 	}
 	
 	public Parent changeScene(ActionEvent event,String fxml ){

@@ -26,15 +26,14 @@ public class Passenger {
 	}
 	
 	public String getAllBookingOfPassenger(){ //取得該乘客所有訂票資訊
-		String result = "";
+		StringBuilder result = new StringBuilder("");
 		if(this.bookingList.isEmpty())
-			result = "您沒有任何訂單!!";
+			result.append("您沒有任何訂單!!");
 		else{
-			result = getPassengerInfo()+"\n\n";
-			for (Iterator<Booking> iterator =  this.bookingList.iterator();iterator.hasNext();)
-				result += iterator.next().getBookingInfoString("flight");
+			result.append(getPassengerInfo()+"\n\n");
+			this.bookingList.forEach(booking -> result.append(booking.getBookingInfoString("flight")));
 		}			
-		return result;
+		return result.toString();
 	}
 	
 	public void makeBooking(SpecificFlight theFlight){  //乘客訂票

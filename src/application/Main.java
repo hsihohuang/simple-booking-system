@@ -30,6 +30,7 @@ public class Main extends Application {
 		try {
 			Parent root = FXMLLoader.load(getClass().getResource("view/Main.fxml"));
 			Scene scene = new Scene(root,400,410);
+			setUserAgentStylesheet(STYLESHEET_MODENA);
 			scene.getStylesheets().add(getClass().getResource("view/application.css").toExternalForm());
 			primaryStage.setScene(scene);
 			primaryStage.show();
