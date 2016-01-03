@@ -52,7 +52,7 @@ public class Controller {
 		chooseFlightBox = (ChoiceBox<String>) root.getChildrenUnmodifiable().get(4);
 		chooseFlightBox.setItems(FXCollections.observableArrayList(Main.flightInfoArray));
 			
-		chooseFlightBox.getSelectionModel().selectedIndexProperty().addListener(new	ChangeListener<Number>() {
+		chooseFlightBox.getSelectionModel().selectedIndexProperty().addListener(new ChangeListener<Number>() {
 			        public void changed(ObservableValue ov, Number value, Number new_value) {
 			        		tmpFlight = (Main.specificFlightMap.get((int)ov.getValue()+1));
 			        }
